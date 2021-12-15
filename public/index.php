@@ -1,8 +1,13 @@
-<?php include_once('../template-parts/header.php'); ?>
-<?php include_once('../template-parts/navbar.php'); ?>
-<?php include_once('../template-parts/content.php'); ?>
+<?php
+  include_once('../template-parts/header.php');
+  include_once('../template-parts/navbar.php');
+  include_once('../template-parts/content.php');
 
-<?php echo('<h1>Content</h1>'); ?>
-      
-<?php include_once('../template-parts/sidebar.php'); ?>
-<?php include_once('../template-parts/footer.php'); ?>
+  $content = isset($_GET["page"]) ? $_GET["page"] : 'homepage' ;
+
+  //include_once('content');
+  echo('<h1>Content</h1>');
+
+  include_once('../template-parts/sidebar.php');
+  include_once('../template-parts/footer.php');
+?>
